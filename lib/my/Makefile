@@ -9,7 +9,7 @@ SRC	=	*.c
 
 OBJ	=	$(SRC:.c=.o)
 
-NAME	=	../libmy.a
+NAME	=	libmy.a
 
 RM	=	rm -f
 
@@ -22,6 +22,7 @@ LIB_COMPILE	=	ar rc
 $(NAME):	$(OBJ)
 	$(LIB_COMPILE) $(NAME) $(OBJ)
 	cp $(DOT_H) $(PATH_TO_INCLUDE)
+	cp $(NAME) ../
 
 clean:
 	$(RM) $(OBJ)
